@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layoutDirection="rtl">
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/card_background"
+        android:padding="5dp">
+
+
+        <ImageView
+            android:id="@+id/ivUnSeen"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="2dp"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.28"
+            app:layout_constraintStart_toStartOf="@+id/tvMessageC"
+            app:layout_constraintWidth_percent="0.1"
+            app:srcCompat="@drawable/message_r" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/ivProfileC"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            app:cardElevation="3dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.25">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.25"
+                app:srcCompat="@drawable/delivery_concept" />
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvNameC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="start|center"
+            android:layout_marginTop="6dp"
+            app:layout_constraintEnd_toStartOf="@id/ivCallC"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingStart="1dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="اسامه الصقر "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintStart_toEndOf="@+id/ivProfileC"
+            app:layout_constraintTop_toTopOf="@id/ivProfileC"
+            />
+
+
+        <TextView
+            android:id="@+id/tvMessageC"
+            fontPath="fonts/arial.ttf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white"
+            android:gravity="right"
+            android:text="السلام عليكم "
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfileC"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameC"
+            app:layout_constraintWidth_percent="0.72"
+            tools:ignore="MissingPrefix" />
+
+        <TextView
+            android:id="@+id/tvDateC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="bottom|end"
+            android:text="21/5/2019"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintTop_toBottomOf="@+id/tvMessageC"
+            app:layout_constraintWidth_percent="0.3" />
+
+
+        <ImageView
+            android:id="@+id/ivCallC"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:scaleType="centerInside"
+            app:layout_constraintHeight_percent="0.28"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.1"
+            app:srcCompat="@drawable/call" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
